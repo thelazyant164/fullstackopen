@@ -1,0 +1,10 @@
+title Submit note and reload page to render new note
+
+Browser->Server: HTTP POST: Form submit event (send user input in body of request)
+note right of Server: server creates new note, adds to array "notes"
+Server->Browser: HTTP #302: URL redirect
+Browser->Server: HTTP GET: Get address of "notes"
+note left of Browser: Reload "Notes" page
+Server-->Browser: main.css
+Server-->Browser: main.js
+Server-->Browser: notes.json

@@ -1,0 +1,8 @@
+title Submit note on SPA
+
+note left of Browser: JS code fetches data from <form>
+note left of Browser: JS code creates event handler
+note left of Browser: Event handler prevents default
+note left of Browser: Create new note, adds to list, re-render on page
+Browser->Server: HTTP POST: sends note as .json (specified by Content-type header)
+Server->Browser: HTTP #201: created

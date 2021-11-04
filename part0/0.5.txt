@@ -1,0 +1,14 @@
+title Open SPA
+
+Browser->Server: HTTP GET: fetch HTML document
+Server-->Browser: main document (HTML)
+note left of Browser: <head> of main contains script and stylesheet link
+Browser->Server: HTTP GET: main.css
+Server-->Browser: main.css
+Browser->Server: HTTP GET: main.js
+Server-->Browser: main.js
+note left of Browser: executes JS code, fetch notes from server
+Browser->Server: HTTP GET: notes
+Server-->Browser: notes (as .json)
+note left of Browser: Event handler in JS code read state change (#200)
+note left of Browser: Adds HTML elements to notes to display on page
