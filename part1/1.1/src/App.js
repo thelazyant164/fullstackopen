@@ -8,15 +8,9 @@ const Header = props => (
 
 const Content = props => (
   <>
-    <Part part = {props.part1} exercises = {props.exercises1}></Part>
-    <Part part = {props.part2} exercises = {props.exercises2}></Part>
-    <Part part = {props.part3} exercises = {props.exercises3}></Part>
-  </>
-)
-
-const Part = props => (
-  <>
-    <p>{props.part}: {props.exercises} exercises</p>
+    <p>{props.part1}: {props.exercises1} exercises</p>
+    <p>{props.part2}: {props.exercises2} exercises</p>
+    <p>{props.part3}: {props.exercises3} exercises</p>
   </>
 )
 
