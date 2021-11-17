@@ -14,8 +14,9 @@ const App = () => {
     'Programming without an extremely heavy use of console.log is same as if a doctor would refuse to use x-rays or blood tests when diagnosing patients'
   ]
 
+  const arr = new Array(7).fill(0)
   const [selected, setSelected] = useState(0)
-  const [points, setPoints] = useState([0, 0, 0, 0, 0, 0, 0])
+  const [points, setPoints] = useState(arr)
 
   const randomize = () => {
     const randomNumber = Math.floor(Math.random() * anecdotes.length)
