@@ -1,20 +1,27 @@
 import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import Filter from './components/Filter'
 import InputForm from './components/InputForm'
 import ContactList from './components/ContactList'
 
 const App = () => {
 
-  const [ persons, setPersons ] = useState([
-    { name: 'Arto Hellas',
-      number: "040-123456" }
-  ])
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/persons")
+      .then(response => {
+        const initialData = response.data
+        setPersons(initialData)
+      })
+  }, [])
+
+  const [ persons, setPersons ] = useState([])
   const [ newName, setNewName ] = useState('')
   const [ newNumber, setNewNumber ] = useState('')
   const [ filterPass, setFilterPass ] = useState('')
   const [ shownPersons, setShownPersons ] = useState(persons)
-  // eslint-disable-next-line
-  const updateShownPersons = useEffect(
+
+  useEffect(
     () => {
       if (filterPass !== '') {
         setShownPersons(persons.filter(person => person.name.includes(filterPass)))
