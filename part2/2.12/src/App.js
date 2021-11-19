@@ -46,7 +46,9 @@ const App = () => {
     if (Object.keys(detailedViewCountry).length !== 0) {
       axios
         .get(`http://api.weatherstack.com/current?access_key=${process.env.REACT_APP_API_KEY}&query=${detailedViewCountry.capital}`)
-        .then(response => {setWeatherObj(response.current)})
+        .then(response => {
+          console.log(response.data.current)
+          setWeatherObj(response.data.current)})
     }
   }, [detailedViewCountry])
 

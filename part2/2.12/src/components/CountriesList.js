@@ -17,10 +17,10 @@ const CountriesList = ({country, shouldNotShow, weatherObj}) => {
         )}
       </ul>
       <img src={country.flags[0]} alt={`Flag of ${country.name}`}/>
-      {/* <h3>Weather in {country.capital}</h3>
-      <b>Temperature: </b>{weatherObj.temperature}
-      <img src={weatherObj.weather_icons[0]} alt="Weather"/>
-      <b>Wind: </b>{`${weatherObj.wind_speed} mph direction ${weatherObj.wind_dir}`} */}
+      <h3>Weather in {country.capital}</h3>
+      <div><b>Temperature: </b>{weatherObj.temperature}</div>
+      <div><img src={weatherObj.weather_icons[0]} alt="Weather"/></div>
+      <div><b>Wind: </b>{`${weatherObj.wind_speed} mph direction ${weatherObj.wind_dir}`}</div>
     </>
   }
 }
